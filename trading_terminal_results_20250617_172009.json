@@ -1,0 +1,139 @@
+{
+  "timestamp": "2025-06-17T17:20:09.157899",
+  "model": "o3",
+  "summary": {
+    "total_tests": 4,
+    "successful_tests": 0,
+    "failed_tests": 4,
+    "success_rate": 0.0,
+    "average_latency_ms": 113.4,
+    "min_latency_ms": 51.59,
+    "max_latency_ms": 194.64,
+    "tests_by_scenario": {
+      "Buy Stock Market Order": {
+        "success": false,
+        "latency_ms": 194.64,
+        "validation_details": {
+          "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+        }
+      },
+      "Buy Futures Contracts": {
+        "success": false,
+        "latency_ms": 70.88,
+        "validation_details": {
+          "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+        }
+      },
+      "Sell with Limit Order": {
+        "success": false,
+        "latency_ms": 136.49,
+        "validation_details": {
+          "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+        }
+      },
+      "Stop Loss Order": {
+        "success": false,
+        "latency_ms": 51.59,
+        "validation_details": {
+          "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+        }
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "scenario_name": "Buy Stock Market Order",
+      "success": false,
+      "latency_ms": 194.64,
+      "actual_tool_calls": null,
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "TSLA",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 100
+          }
+        }
+      ],
+      "validation_details": {
+        "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+      },
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+      "model_response": null,
+      "tokens_used": null
+    },
+    {
+      "scenario_name": "Buy Futures Contracts",
+      "success": false,
+      "latency_ms": 70.88,
+      "actual_tool_calls": null,
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "ES",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 400
+          }
+        }
+      ],
+      "validation_details": {
+        "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+      },
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+      "model_response": null,
+      "tokens_used": null
+    },
+    {
+      "scenario_name": "Sell with Limit Order",
+      "success": false,
+      "latency_ms": 136.49,
+      "actual_tool_calls": null,
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "GOOGL",
+            "side": "sell",
+            "order_type": "limit",
+            "quantity": 50,
+            "price": 150
+          }
+        }
+      ],
+      "validation_details": {
+        "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+      },
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+      "model_response": null,
+      "tokens_used": null
+    },
+    {
+      "scenario_name": "Stop Loss Order",
+      "success": false,
+      "latency_ms": 51.59,
+      "actual_tool_calls": null,
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "DIS",
+            "side": "sell",
+            "order_type": "stop",
+            "quantity": 100,
+            "stop_price": 95
+          }
+        }
+      ],
+      "validation_details": {
+        "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+      },
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+      "model_response": null,
+      "tokens_used": null
+    }
+  ]
+}
