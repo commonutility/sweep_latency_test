@@ -1,0 +1,1013 @@
+{
+  "timestamp": "2025-06-17T17:45:36.305264",
+  "model": "o4-mini",
+  "summary": {
+    "total_tests": 17,
+    "successful_tests": 11,
+    "failed_tests": 6,
+    "success_rate": 64.70588235294117,
+    "average_latency_ms": 3355.510588235294,
+    "min_latency_ms": 1016.0,
+    "max_latency_ms": 12183.07,
+    "tests_by_scenario": {
+      "Check Stock Price": {
+        "success": true,
+        "latency_ms": 1874.95,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Check Crypto Price with Timeframe": {
+        "success": true,
+        "latency_ms": 1582.49,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Buy Stock Market Order": {
+        "success": true,
+        "latency_ms": 2441.28,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Buy Futures Contracts": {
+        "success": true,
+        "latency_ms": 2156.17,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Sell with Limit Order": {
+        "success": true,
+        "latency_ms": 1958.09,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "View Options Chain": {
+        "success": false,
+        "latency_ms": 3877.6,
+        "validation_details": {
+          "matches_expected": false,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": [],
+          "reason": "Argument mismatch for 'expiration': expected '30_days', got '90_days'"
+        }
+      },
+      "Options with Specific Expiry": {
+        "success": false,
+        "latency_ms": 5017.66,
+        "validation_details": {
+          "matches_expected": false,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": [],
+          "reason": "Argument mismatch for 'expiration': expected 'next_january', got '2025-01-17'"
+        }
+      },
+      "View Order Book": {
+        "success": true,
+        "latency_ms": 1413.86,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Check Positions": {
+        "success": false,
+        "latency_ms": 1016.0,
+        "validation_details": {
+          "matches_expected": false,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": [],
+          "reason": "Argument mismatch for 'filter': expected 'open', got 'all'"
+        }
+      },
+      "Find Trading Opportunities": {
+        "success": true,
+        "latency_ms": 1884.69,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Add Simple Indicator": {
+        "success": true,
+        "latency_ms": 4468.29,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Multiple Indicators": {
+        "success": false,
+        "latency_ms": 2272.95,
+        "validation_details": {
+          "matches_expected": false,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": [],
+          "reason": "Argument mismatch for 'indicators': expected '[{'type': 'RSI', 'period': 14}, {'type': 'MACD'}]', got '[{'type': 'RSI'}, {'type': 'MACD'}]'"
+        }
+      },
+      "Price Check Before Order": {
+        "success": false,
+        "latency_ms": 12183.07,
+        "validation_details": {
+          "matches_expected": false,
+          "correct_tool_count": false,
+          "actual_count": 1,
+          "expected_count": 2,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": [],
+          "reason": "Expected 2 tool calls, got 1"
+        }
+      },
+      "Full Analysis Setup": {
+        "success": false,
+        "latency_ms": 4845.33,
+        "validation_details": {
+          "matches_expected": false,
+          "correct_tool_count": false,
+          "actual_count": 1,
+          "expected_count": 3,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": [],
+          "reason": "Expected 3 tool calls, got 1"
+        }
+      },
+      "Check Account Balance": {
+        "success": true,
+        "latency_ms": 2231.92,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Ambiguous Symbol": {
+        "success": true,
+        "latency_ms": 5846.12,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      },
+      "Stop Loss Order": {
+        "success": true,
+        "latency_ms": 1973.21,
+        "validation_details": {
+          "matches_expected": true,
+          "correct_tool_count": true,
+          "actual_count": 1,
+          "expected_count": 1,
+          "tool_name_matches": [],
+          "argument_matches": [],
+          "missing_tools": [],
+          "extra_tools": []
+        }
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "scenario_name": "Check Stock Price",
+      "success": true,
+      "latency_ms": 1874.95,
+      "actual_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "AAPL"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "AAPL"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 841,
+        "completion_tokens": 154,
+        "total_tokens": 995
+      }
+    },
+    {
+      "scenario_name": "Check Crypto Price with Timeframe",
+      "success": true,
+      "latency_ms": 1582.49,
+      "actual_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "BTC-USD",
+            "timeframe": "1h"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "BTC-USD",
+            "timeframe": "1h"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 842,
+        "completion_tokens": 33,
+        "total_tokens": 875
+      }
+    },
+    {
+      "scenario_name": "Buy Stock Market Order",
+      "success": true,
+      "latency_ms": 2441.28,
+      "actual_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "TSLA",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 100
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "TSLA",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 100
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 841,
+        "completion_tokens": 166,
+        "total_tokens": 1007
+      }
+    },
+    {
+      "scenario_name": "Buy Futures Contracts",
+      "success": true,
+      "latency_ms": 2156.17,
+      "actual_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "ES",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 400
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "ES",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 400
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 840,
+        "completion_tokens": 229,
+        "total_tokens": 1069
+      }
+    },
+    {
+      "scenario_name": "Sell with Limit Order",
+      "success": true,
+      "latency_ms": 1958.09,
+      "actual_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "GOOGL",
+            "side": "sell",
+            "order_type": "limit",
+            "quantity": 50,
+            "price": 150
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "GOOGL",
+            "side": "sell",
+            "order_type": "limit",
+            "quantity": 50,
+            "price": 150
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 845,
+        "completion_tokens": 171,
+        "total_tokens": 1016
+      }
+    },
+    {
+      "scenario_name": "View Options Chain",
+      "success": false,
+      "latency_ms": 3877.6,
+      "actual_tool_calls": [
+        {
+          "name": "render_options_chain",
+          "arguments": {
+            "underlying_symbol": "SPY",
+            "expiration": "90_days",
+            "option_type": "both"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_options_chain",
+          "arguments": {
+            "underlying_symbol": "SPY",
+            "expiration": "30_days"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": false,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": [],
+        "reason": "Argument mismatch for 'expiration': expected '30_days', got '90_days'"
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 842,
+        "completion_tokens": 357,
+        "total_tokens": 1199
+      }
+    },
+    {
+      "scenario_name": "Options with Specific Expiry",
+      "success": false,
+      "latency_ms": 5017.66,
+      "actual_tool_calls": [
+        {
+          "name": "render_options_chain",
+          "arguments": {
+            "underlying_symbol": "NVDA",
+            "expiration": "2025-01-17",
+            "option_type": "both"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_options_chain",
+          "arguments": {
+            "underlying_symbol": "NVDA",
+            "expiration": "next_january"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": false,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": [],
+        "reason": "Argument mismatch for 'expiration': expected 'next_january', got '2025-01-17'"
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 847,
+        "completion_tokens": 745,
+        "total_tokens": 1592
+      }
+    },
+    {
+      "scenario_name": "View Order Book",
+      "success": true,
+      "latency_ms": 1413.86,
+      "actual_tool_calls": [
+        {
+          "name": "render_orderbook_pane",
+          "arguments": {
+            "symbol": "MSFT"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_orderbook_pane",
+          "arguments": {
+            "symbol": "MSFT"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 842,
+        "completion_tokens": 91,
+        "total_tokens": 933
+      }
+    },
+    {
+      "scenario_name": "Check Positions",
+      "success": false,
+      "latency_ms": 1016.0,
+      "actual_tool_calls": [
+        {
+          "name": "render_positions_pane",
+          "arguments": {
+            "filter": "all"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_positions_pane",
+          "arguments": {
+            "filter": "open"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": false,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": [],
+        "reason": "Argument mismatch for 'filter': expected 'open', got 'all'"
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 838,
+        "completion_tokens": 89,
+        "total_tokens": 927
+      }
+    },
+    {
+      "scenario_name": "Find Trading Opportunities",
+      "success": true,
+      "latency_ms": 1884.69,
+      "actual_tool_calls": [
+        {
+          "name": "open_market_scanner",
+          "arguments": {
+            "scan_type": "volume_leaders",
+            "market": "stocks"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "open_market_scanner",
+          "arguments": {
+            "scan_type": "volume_leaders",
+            "market": "stocks"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 841,
+        "completion_tokens": 96,
+        "total_tokens": 937
+      }
+    },
+    {
+      "scenario_name": "Add Simple Indicator",
+      "success": true,
+      "latency_ms": 4468.29,
+      "actual_tool_calls": [
+        {
+          "name": "add_technical_indicators",
+          "arguments": {
+            "symbol": "AAPL",
+            "indicators": [
+              {
+                "type": "SMA",
+                "period": 50
+              }
+            ]
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "add_technical_indicators",
+          "arguments": {
+            "symbol": "AAPL",
+            "indicators": [
+              {
+                "type": "SMA",
+                "period": 50
+              }
+            ]
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 845,
+        "completion_tokens": 361,
+        "total_tokens": 1206
+      }
+    },
+    {
+      "scenario_name": "Multiple Indicators",
+      "success": false,
+      "latency_ms": 2272.95,
+      "actual_tool_calls": [
+        {
+          "name": "add_technical_indicators",
+          "arguments": {
+            "symbol": "TSLA",
+            "indicators": [
+              {
+                "type": "RSI"
+              },
+              {
+                "type": "MACD"
+              }
+            ]
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "add_technical_indicators",
+          "arguments": {
+            "symbol": "TSLA",
+            "indicators": [
+              {
+                "type": "RSI",
+                "period": 14
+              },
+              {
+                "type": "MACD"
+              }
+            ]
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": false,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": [],
+        "reason": "Argument mismatch for 'indicators': expected '[{'type': 'RSI', 'period': 14}, {'type': 'MACD'}]', got '[{'type': 'RSI'}, {'type': 'MACD'}]'"
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 843,
+        "completion_tokens": 170,
+        "total_tokens": 1013
+      }
+    },
+    {
+      "scenario_name": "Price Check Before Order",
+      "success": false,
+      "latency_ms": 12183.07,
+      "actual_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "AMZN"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "AMZN"
+          }
+        },
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "AMZN",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 25
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": false,
+        "correct_tool_count": false,
+        "actual_count": 1,
+        "expected_count": 2,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": [],
+        "reason": "Expected 2 tool calls, got 1"
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 846,
+        "completion_tokens": 1754,
+        "total_tokens": 2600
+      }
+    },
+    {
+      "scenario_name": "Full Analysis Setup",
+      "success": false,
+      "latency_ms": 4845.33,
+      "actual_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "META",
+            "timeframe": "5m",
+            "chart_type": "candlestick"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_price_pane",
+          "arguments": {
+            "symbol": "META"
+          }
+        },
+        {
+          "name": "render_orderbook_pane",
+          "arguments": {
+            "symbol": "META"
+          }
+        },
+        {
+          "name": "add_technical_indicators",
+          "arguments": {
+            "symbol": "META",
+            "indicators": [
+              {
+                "type": "Volume"
+              }
+            ]
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": false,
+        "correct_tool_count": false,
+        "actual_count": 1,
+        "expected_count": 3,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": [],
+        "reason": "Expected 3 tool calls, got 1"
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 853,
+        "completion_tokens": 421,
+        "total_tokens": 1274
+      }
+    },
+    {
+      "scenario_name": "Check Account Balance",
+      "success": true,
+      "latency_ms": 2231.92,
+      "actual_tool_calls": [
+        {
+          "name": "render_account_summary",
+          "arguments": {
+            "account_type": "all",
+            "show_details": true
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "render_account_summary",
+          "arguments": {}
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 839,
+        "completion_tokens": 222,
+        "total_tokens": 1061
+      }
+    },
+    {
+      "scenario_name": "Ambiguous Symbol",
+      "success": true,
+      "latency_ms": 5846.12,
+      "actual_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "AAPL",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 1
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "AAPL",
+            "side": "buy",
+            "order_type": "market",
+            "quantity": 1
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 836,
+        "completion_tokens": 358,
+        "total_tokens": 1194
+      }
+    },
+    {
+      "scenario_name": "Stop Loss Order",
+      "success": true,
+      "latency_ms": 1973.21,
+      "actual_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "DIS",
+            "side": "sell",
+            "order_type": "stop",
+            "quantity": 100,
+            "stop_price": 95
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "open_order_entry",
+          "arguments": {
+            "symbol": "DIS",
+            "side": "sell",
+            "order_type": "stop",
+            "quantity": 100,
+            "stop_price": 95
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": true,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [],
+        "argument_matches": [],
+        "missing_tools": [],
+        "extra_tools": []
+      },
+      "error": null,
+      "model_response": null,
+      "tokens_used": {
+        "prompt_tokens": 848,
+        "completion_tokens": 106,
+        "total_tokens": 954
+      }
+    }
+  ]
+}
