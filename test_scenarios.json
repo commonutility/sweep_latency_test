@@ -1,0 +1,143 @@
+{
+  "scenarios": [
+    {
+      "name": "Simple Weather Query",
+      "description": "Test basic weather tool usage",
+      "prompt": "What's the weather in San Francisco?",
+      "tools": [
+        {
+          "name": "get_weather",
+          "description": "Get the current weather in a given location",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The city and state, e.g. San Francisco, CA"
+              },
+              "unit": {
+                "type": "string",
+                "enum": ["celsius", "fahrenheit"],
+                "description": "The temperature unit"
+              }
+            },
+            "required": ["location"]
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "get_weather",
+          "arguments": {
+            "location": "San Francisco, CA"
+          }
+        }
+      ],
+      "tags": ["weather", "simple"]
+    },
+    {
+      "name": "Complex Database Query",
+      "description": "Test database query tool with multiple conditions",
+      "prompt": "Find all orders from last month that are over $100 and not yet delivered",
+      "tools": [
+        {
+          "name": "query_database",
+          "description": "Query the database with SQL-like conditions",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "table": {
+                "type": "string",
+                "description": "The table to query"
+              },
+              "conditions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "field": {"type": "string"},
+                    "operator": {"type": "string"},
+                    "value": {"type": "string"}
+                  }
+                }
+              },
+              "time_range": {
+                "type": "object",
+                "properties": {
+                  "start": {"type": "string"},
+                  "end": {"type": "string"}
+                }
+              }
+            },
+            "required": ["table", "conditions"]
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "query_database",
+          "arguments": {
+            "table": "orders",
+            "conditions": [
+              {"field": "amount", "operator": ">", "value": "100"},
+              {"field": "status", "operator": "!=", "value": "delivered"}
+            ],
+            "time_range": {
+              "start": "last_month_start",
+              "end": "last_month_end"
+            }
+          }
+        }
+      ],
+      "tags": ["database", "complex", "conditions"]
+    },
+    {
+      "name": "Email with Attachment",
+      "description": "Test email tool with file attachment",
+      "prompt": "Send the quarterly report to john@example.com with the Q4 spreadsheet attached",
+      "tools": [
+        {
+          "name": "send_email",
+          "description": "Send an email with optional attachments",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "to": {
+                "type": "string",
+                "description": "Recipient email address"
+              },
+              "subject": {
+                "type": "string",
+                "description": "Email subject"
+              },
+              "body": {
+                "type": "string",
+                "description": "Email body content"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "List of file paths to attach"
+              }
+            },
+            "required": ["to", "subject", "body"]
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "send_email",
+          "arguments": {
+            "to": "john@example.com",
+            "subject": "Quarterly Report",
+            "body": "Please find attached the Q4 spreadsheet.",
+            "attachments": ["Q4_spreadsheet.xlsx"]
+          }
+        }
+      ],
+      "tags": ["email", "attachments"]
+    }
+  ]
+} 

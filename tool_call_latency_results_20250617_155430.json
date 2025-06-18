@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-06-17T15:54:30.104372",
+  "model": "o4-mini",
+  "results": [
+    {
+      "scenario": "Weather Query",
+      "success": true,
+      "latency_ms": 3762.92,
+      "model": "o4-mini",
+      "prompt": "What's the weather like in San Francisco?",
+      "tool_calls": [
+        {
+          "id": "call_Q0OTfSqXb7KqmRULPRe0lzhM",
+          "function": {
+            "name": "get_weather",
+            "arguments": "{\"location\":\"San Francisco, CA\",\"unit\":\"fahrenheit\"}"
+          }
+        }
+      ],
+      "message": null,
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 105,
+        "completion_tokens": 223,
+        "total_tokens": 328
+      }
+    },
+    {
+      "scenario": "Math Calculation",
+      "success": true,
+      "latency_ms": 1293.51,
+      "model": "o4-mini",
+      "prompt": "Calculate the square root of 144",
+      "tool_calls": [
+        {
+          "id": "call_unUEW5kCK5DQGLwFicTEt5Mt",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\":\"sqrt(144)\"}"
+          }
+        }
+      ],
+      "message": null,
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 90,
+        "completion_tokens": 25,
+        "total_tokens": 115
+      }
+    },
+    {
+      "scenario": "Multiple Tools Available",
+      "success": true,
+      "latency_ms": 5760.07,
+      "model": "o4-mini",
+      "prompt": "What's the weather in New York and what's 15 * 23?",
+      "tool_calls": [
+        {
+          "id": "call_QH3VSTn25ngwpctzbhkoYcVv",
+          "function": {
+            "name": "get_weather",
+            "arguments": "{\"location\":\"New York\",\"unit\":\"fahrenheit\"}"
+          }
+        }
+      ],
+      "message": null,
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 151,
+        "completion_tokens": 477,
+        "total_tokens": 628
+      }
+    },
+    {
+      "scenario": "No Tool Needed",
+      "success": true,
+      "latency_ms": 2052.91,
+      "model": "o4-mini",
+      "prompt": "Tell me a joke about programmers",
+      "tool_calls": null,
+      "message": "Why do programmers always mix up Halloween and Christmas?\n\nBecause Oct 31 == Dec 25!",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 143,
+        "completion_tokens": 101,
+        "total_tokens": 244
+      }
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "successful_tests": 4,
+    "average_latency_ms": 3217.3525,
+    "min_latency_ms": 1293.51,
+    "max_latency_ms": 5760.07
+  }
+}

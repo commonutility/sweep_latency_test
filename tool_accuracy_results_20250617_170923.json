@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-06-17T17:09:23.115632",
+  "model": "o3",
+  "summary": {
+    "total_tests": 1,
+    "successful_tests": 0,
+    "failed_tests": 1,
+    "success_rate": 0.0,
+    "average_latency_ms": 154.89,
+    "min_latency_ms": 154.89,
+    "max_latency_ms": 154.89,
+    "tests_by_scenario": {
+      "Simple Weather Query": {
+        "success": false,
+        "latency_ms": 154.89,
+        "validation_details": {
+          "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+        }
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "scenario_name": "Simple Weather Query",
+      "success": false,
+      "latency_ms": 154.89,
+      "actual_tool_calls": null,
+      "expected_tool_calls": [
+        {
+          "name": "get_weather",
+          "arguments": {
+            "location": "San Francisco, CA"
+          }
+        }
+      ],
+      "validation_details": {
+        "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+      },
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************nz4A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+      "model_response": null,
+      "tokens_used": null
+    }
+  ]
+}

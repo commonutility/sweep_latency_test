@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-06-17T15:52:31.398255",
+  "model": "o4-mini",
+  "results": [
+    {
+      "scenario": "Weather Query",
+      "success": false,
+      "latency_ms": 224.65,
+      "model": "o4-mini",
+      "prompt": "What's the weather like in San Francisco?",
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: your-val***********here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+    },
+    {
+      "scenario": "Math Calculation",
+      "success": false,
+      "latency_ms": 74.4,
+      "model": "o4-mini",
+      "prompt": "Calculate the square root of 144",
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: your-val***********here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+    },
+    {
+      "scenario": "Multiple Tools Available",
+      "success": false,
+      "latency_ms": 75.36,
+      "model": "o4-mini",
+      "prompt": "What's the weather in New York and what's 15 * 23?",
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: your-val***********here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+    },
+    {
+      "scenario": "No Tool Needed",
+      "success": false,
+      "latency_ms": 51.59,
+      "model": "o4-mini",
+      "prompt": "Tell me a joke about programmers",
+      "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: your-val***********here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}"
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "successful_tests": 0,
+    "average_latency_ms": 0,
+    "min_latency_ms": 0,
+    "max_latency_ms": 0
+  }
+}

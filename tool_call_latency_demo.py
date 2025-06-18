@@ -54,14 +54,14 @@ def calculate_math_tool():
         }
     }
 
-def measure_tool_call_latency(prompt: str, tools: List[Dict[str, Any]], model: str = "o4-mini") -> Dict[str, Any]:
+def measure_tool_call_latency(prompt: str, tools: List[Dict[str, Any]], model: str = "o3") -> Dict[str, Any]:
     """
     Measures the time it takes for the model to return a tool call
     
     Args:
         prompt: The user prompt that should trigger a tool call
         tools: List of tool definitions
-        model: The model to use (default: o4-mini)
+        model: The model to use (default: o3)
     
     Returns:
         Dictionary containing timing information and the response
@@ -140,7 +140,7 @@ def run_latency_tests():
     
     print("=" * 60)
     print("OpenAI Tool Call Latency Measurement Demo")
-    print(f"Using model: o4-mini")
+    print(f"Using model: o3")
     print(f"Timestamp: {datetime.now().isoformat()}")
     print("=" * 60)
     print()
@@ -232,7 +232,7 @@ def run_latency_tests():
     with open(output_filename, 'w') as f:
         json.dump({
             "timestamp": datetime.now().isoformat(),
-            "model": "o4-mini",
+            "model": "o3",
             "results": results,
             "summary": {
                 "total_tests": len(results),

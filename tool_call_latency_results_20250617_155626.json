@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-06-17T15:56:26.946278",
+  "model": "o3",
+  "results": [
+    {
+      "scenario": "Weather Query",
+      "success": true,
+      "latency_ms": 1632.92,
+      "model": "o3",
+      "prompt": "What's the weather like in San Francisco?",
+      "tool_calls": [
+        {
+          "id": "call_8CZBZUCYLmtKjDBeZFzP58iK",
+          "function": {
+            "name": "get_weather",
+            "arguments": "{\"location\":\"San Francisco, CA\",\"unit\":\"fahrenheit\"}"
+          }
+        }
+      ],
+      "message": null,
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 105,
+        "completion_tokens": 31,
+        "total_tokens": 136
+      }
+    },
+    {
+      "scenario": "Math Calculation",
+      "success": true,
+      "latency_ms": 2503.68,
+      "model": "o3",
+      "prompt": "Calculate the square root of 144",
+      "tool_calls": [
+        {
+          "id": "call_hKjqJIJp0T2P14h93EAa9p2q",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\":\"sqrt(144)\"}"
+          }
+        }
+      ],
+      "message": null,
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 90,
+        "completion_tokens": 25,
+        "total_tokens": 115
+      }
+    },
+    {
+      "scenario": "Multiple Tools Available",
+      "success": true,
+      "latency_ms": 4110.18,
+      "model": "o3",
+      "prompt": "What's the weather in New York and what's 15 * 23?",
+      "tool_calls": [
+        {
+          "id": "call_PmdemcoDiHWSfloctvxidcrK",
+          "function": {
+            "name": "get_weather",
+            "arguments": "{\"location\":\"New York, NY\",\"unit\":\"fahrenheit\"}"
+          }
+        }
+      ],
+      "message": null,
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 151,
+        "completion_tokens": 95,
+        "total_tokens": 246
+      }
+    },
+    {
+      "scenario": "No Tool Needed",
+      "success": true,
+      "latency_ms": 1443.09,
+      "model": "o3",
+      "prompt": "Tell me a joke about programmers",
+      "tool_calls": null,
+      "message": "Why do programmers prefer dark mode?\n\nBecause light attracts bugs!",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 143,
+        "completion_tokens": 30,
+        "total_tokens": 173
+      }
+    }
+  ],
+  "summary": {
+    "total_tests": 4,
+    "successful_tests": 4,
+    "average_latency_ms": 2422.4675,
+    "min_latency_ms": 1443.09,
+    "max_latency_ms": 4110.18
+  }
+}
