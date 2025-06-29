@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-28T20:00:55.898281",
+    "reasoning_strategy": "Custom",
+    "test_suite": "ConfigurableTestSuite",
+    "total_scenarios": 1
+  },
+  "analysis": {
+    "metadata": {
+      "strategy_name": "Custom",
+      "test_suite_name": "ConfigurableTestSuite",
+      "total_results": 1,
+      "timestamp": null
+    },
+    "accuracy": {
+      "total_tests": 1,
+      "successful_tests": 0,
+      "failed_tests": 1,
+      "success_rate": 0.0,
+      "tag_breakdown": {}
+    },
+    "latency": {
+      "total_measurements": 1,
+      "average_ms": 135.84,
+      "median_ms": 135.84,
+      "min_ms": 135.84,
+      "max_ms": 135.84,
+      "stdev_ms": 0,
+      "percentiles": {
+        "p50": 135.84,
+        "p90": 135.84,
+        "p95": 135.84,
+        "p99": 135.84
+      },
+      "distribution": {
+        "under_50ms": 0,
+        "50_100ms": 0,
+        "100_200ms": 1,
+        "200_500ms": 0,
+        "500_1000ms": 0,
+        "over_1000ms": 0
+      }
+    },
+    "tool_usage": {
+      "unique_tools": 1,
+      "tool_breakdown": {
+        "get_weather": {
+          "times_expected": 1,
+          "times_called": 0,
+          "success_rate": 0.0,
+          "accuracy": 0.0
+        }
+      },
+      "most_used": "get_weather",
+      "highest_success_rate": "get_weather"
+    },
+    "failure_analysis": {
+      "total_failures": 1,
+      "failure_rate": 100.0,
+      "failure_categories": {
+        "execution_errors": 0,
+        "missing_tools": 1,
+        "extra_tools": 0,
+        "argument_errors": 0,
+        "tool_count_mismatch": 0,
+        "other": 0
+      },
+      "common_reasons": [
+        "Missing tools: ['get_weather']; Extra tools: ['get_weather']; Argument mismatches"
+      ]
+    },
+    "scenario_breakdown": {
+      "Simple Weather Query": {
+        "attempts": 1,
+        "successes": 0,
+        "success_rate": 0.0,
+        "average_latency_ms": 135.84,
+        "unique_errors": 1
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "scenario_name": "Simple Weather Query",
+      "success": false,
+      "latency_ms": 135.84,
+      "actual_tool_calls": [
+        {
+          "name": "get_weather",
+          "arguments": {
+            "location": "San Francisco"
+          }
+        }
+      ],
+      "expected_tool_calls": [
+        {
+          "name": "get_weather",
+          "arguments": {
+            "location": "San Francisco, CA"
+          }
+        }
+      ],
+      "validation_details": {
+        "matches_expected": false,
+        "correct_tool_count": true,
+        "actual_count": 1,
+        "expected_count": 1,
+        "tool_name_matches": [
+          "get_weather"
+        ],
+        "argument_matches": [
+          {
+            "tool": "get_weather",
+            "matches": false,
+            "expected": {
+              "location": "San Francisco, CA"
+            },
+            "actual": {
+              "location": "San Francisco"
+            }
+          }
+        ],
+        "missing_tools": [
+          {
+            "name": "get_weather",
+            "arguments": {
+              "location": "San Francisco, CA"
+            }
+          }
+        ],
+        "extra_tools": [
+          {
+            "name": "get_weather",
+            "arguments": {
+              "location": "San Francisco"
+            }
+          }
+        ],
+        "reason": "Missing tools: ['get_weather']; Extra tools: ['get_weather']; Argument mismatches"
+      },
+      "error": null,
+      "model_response": "Custom strategy processed: What's the weather in San Francisco?",
+      "tokens_used": null,
+      "metadata": {
+        "strategy": "Custom",
+        "analysis_method": "keyword_matching",
+        "available_tools": [
+          "get_weather"
+        ]
+      }
+    }
+  ]
+}
